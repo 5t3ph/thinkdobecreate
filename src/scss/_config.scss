@@ -1,0 +1,47 @@
+// Bootstrap Variable Overrides
+// Declared prior to including default to allow replacing
+$theme-colors: (
+	"primary": #21c2b7,
+	"secondary": #7660eb,
+	"tertiary": #fc5d6d,
+	"support": #ffbc00,
+	"light": #F9F9F9,
+	"dark": #162310,
+	"gray": #E9E9EA
+);
+
+$colors: (
+	"gray": #E9E9EA,
+	"gray-dark": #BBB9BA,
+	"gray-text": #767676 // minimum accepted value for 508 contrast over white
+);
+
+$body-color: #666;
+$link-color: #7660eb;
+$border-radius: .75em;
+
+$nav-border-radius: .35em;
+$btn-border-radius: $nav-border-radius;
+$dropdown-border-radius: $nav-border-radius;
+$nav-pills-border-radius: $nav-border-radius;
+$input-border-radius: $nav-border-radius;
+
+$headings-font-family: 'Oxygen', sans-serif;
+$headings-font-weight: 600;
+$h1-font-size: 40px; 
+$h2-font-size: 26px;
+$h3-font-size: 20px;
+$h4-font-size: 18px;
+
+$input-btn-padding-x: 1.25em;
+
+// Required for Bootstrap
+@import "../bootstrap/scss/functions";
+
+@import "../bootstrap/scss/variables";
+// Remove unneeded items from Bootstrap
+// Follows variables as need to be defined before can be altered
+$theme-colors: map-remove($theme-colors, "success", "danger", "warning", "info");
+$colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange", "yellow", "green", "teal", "cyan");
+
+@import "../bootstrap/scss/mixins";
