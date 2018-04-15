@@ -11,9 +11,16 @@ footer {
 
 #github {
 	font-size: 12px;
-    padding: .5em 3em;
-    position: absolute;
-    right: -2.5em;
-    transform: rotate(-35deg);
-    bottom: 1.5em;
+	display: inline-block;
+    margin: .5em auto;
+    padding: .5em .75em;
+	
+	@include media-breakpoint-up(md) {
+		padding: .5em 3em;
+		position: absolute;
+		right: -2.5em;
+		transform: rotate(-35deg);
+		bottom: 1em;
+	}
+    
 }

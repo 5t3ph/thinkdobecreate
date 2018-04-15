@@ -1,10 +1,18 @@
 .hero {
 	height: 40vh;
+	max-height: 350px;
 	
 	p {
 		font-size: 30px;
 		font-weight: 300;
 		line-height: 1.4;
 		color: color("gray-text");
+	}
+	
+	@include media-breakpoint-down(sm) {
+		
+		p {
+			font-size: 18px;
+		}
 	}
 }

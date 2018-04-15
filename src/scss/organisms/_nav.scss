@@ -25,5 +25,10 @@
 				left: 0;
 			}
 		}
+		
+		@include media-breakpoint-down(xs) {
+			padding-left: .65em;
+			padding-right: .65em;
+		}
 	}
 }

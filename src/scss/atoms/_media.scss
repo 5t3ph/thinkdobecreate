@@ -20,4 +20,14 @@
 		  fill: $color;
 		}  
 	  }
+	
+	@include media-breakpoint-down(lg) {
+		width: 55vw;
+		top: 10vh;
+	}
+	
+	@include media-breakpoint-down(sm) {
+		width: 75vw;
+		top: 20vh;
+	}
 }

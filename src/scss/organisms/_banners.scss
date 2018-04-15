@@ -1,7 +1,12 @@
 .banner {
-	padding: 2em 0;
 	
 	:last-child {
 		margin-bottom: 0;
+	}
+	
+	@include media-breakpoint-down(sm) {
+		p.h1 {
+			font-size: 24px;
+		}
 	}
 }
