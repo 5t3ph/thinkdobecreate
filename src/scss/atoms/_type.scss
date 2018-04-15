@@ -4,12 +4,17 @@ h1 {
 
 h1,
 h2,
-h3 {
+h3,
+.entry-meta {
+	&.small,
 	small {
 		font-size: 14px;
 		color: color("gray-text");
-		letter-spacing: .15em;
 		font-family: sans-serif;
+		
+		&:not(.small) {
+			letter-spacing: .15em;
+		}
 		
 		.bg-light & {
 			color: #737373; // Darken slightly for passing contrast
