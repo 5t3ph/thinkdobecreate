@@ -12,10 +12,10 @@ module.exports = function (grunt) {
                 files: { 
 					// Dictionary of files
 					// distribution : source
-                    'dist/styles.css': 'scss/init.scss'
+                    'dist/styles.css': 'scss/init.scss',
 					
 					// Promote to theme also
-					//'../wp-content/themes/theme/css/styles.css': 'scss/init.scss'
+					'../wp-content/themes/tdbc/css/styles.css': 'scss/init.scss'
                 }
             }
         },
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 			  ]
 			},
 			dist: {
-			  src: ['dist/*.css'] //, '../wp-content/themes/theme/css/*.css']
+			  src: ['dist/*.css', '../wp-content/themes/tdbc/css/*.css']
 			}
 		  },
 		watch: {

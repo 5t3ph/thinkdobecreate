@@ -20,6 +20,10 @@ h3,
 			color: #737373; // Darken slightly for passing contrast
 		}
 		
+		a {
+			color: inherit;
+		}
+		
 		&.decorated {
 			position: relative;
 				
