@@ -1,0 +1,29 @@
+#nav {
+	border-radius: 0 0 0 .75em;
+	
+	// @link https://codemyui.com/reveal-disappear-underline-hover-effect-links/
+	a {
+		position: relative;
+		
+		&:before {
+			content: ''; 
+			position: absolute;
+			top: calc( 100% - .6em );
+			width: 0;
+			right: 0;
+			height: 2px;
+		}
+
+		&:before {
+			transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+			background: #fff;
+		}
+		
+		&:hover {
+			&:before {
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+}

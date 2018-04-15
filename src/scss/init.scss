@@ -19,10 +19,10 @@
 @import "mixins";
 
 // Atoms
-/*@import "atoms/type";
-@import "atoms/icons";
-@import "atoms/media";
+@import "atoms/type";
 @import "atoms/buttons";
+@import "atoms/media";
+/*@import "atoms/icons";
 @import "atoms/forms";
 @import "atoms/lists";*/
 
@@ -30,17 +30,18 @@
 //@import "molecules/socialicons";
 
 // Organisms
-/*@import "organisms/nav";
-@import "organisms/footer";
 @import "organisms/heroes";
 @import "organisms/banners";
 @import "organisms/card";
-@import "organisms/modals";*/
+@import "organisms/nav";
+@import "organisms/footer";
+/*@import "organisms/modals";*/
 
 // Page Specific Mods
 /*@import "pages/frontpage";
 @import "pages/blog";*/
 
 // Theme Utilities
-/*@import "utilities/background";
-@import "utilities/layout";*/
+@import "utilities/layout";
+@import "utilities/borders";
+/*@import "utilities/background";*/

@@ -1,0 +1,9 @@
+[class*="btn-outline"] {
+	color: $body-color;
+	background-color: #fff;
+	border-width: 3px;
+}
+
+.bg-light .btn-link {
+	font-weight: 600;
+}

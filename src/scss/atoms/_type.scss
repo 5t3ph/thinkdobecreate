@@ -1,0 +1,43 @@
+h1 {
+	color: theme-color("primary");
+}
+
+h1,
+h2,
+h3 {
+	small {
+		font-size: 14px;
+		color: color("gray-text");
+		letter-spacing: .15em;
+		font-family: sans-serif;
+		
+		.bg-light & {
+			color: #737373; // Darken slightly for passing contrast
+		}
+		
+		&.decorated {
+			position: relative;
+				
+				&:before,
+				&:after {
+					color: theme-color("tertiary");
+					font-weight: 400;
+					display: inline-block;
+				}
+				
+				&:before {
+					content: "<";
+					margin-right: .25em;
+				}
+				
+				&:after {
+					content: ">";
+					margin-left: .25em;
+				}
+		}
+	}
+}
+
+p {
+	line-height: 1.7;
+}

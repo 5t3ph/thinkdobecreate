@@ -1,8 +1,8 @@
 // Bootstrap Variable Overrides
 // Declared prior to including default to allow replacing
 $theme-colors: (
-	"primary": #21c2b7,
-	"secondary": #7660eb,
+	"primary": #7660eb,
+	"secondary": #21c2b7,
 	"tertiary": #fc5d6d,
 	"support": #ffbc00,
 	"light": #F9F9F9,
@@ -26,11 +26,11 @@ $dropdown-border-radius: $nav-border-radius;
 $nav-pills-border-radius: $nav-border-radius;
 $input-border-radius: $nav-border-radius;
 
-$headings-font-family: 'Oxygen', sans-serif;
-$headings-font-weight: 600;
+$headings-font-family: 'Source Sans Pro', sans-serif;
+$headings-font-weight: 400;
 $h1-font-size: 40px; 
-$h2-font-size: 26px;
-$h3-font-size: 20px;
+$h2-font-size: 32px;
+$h3-font-size: 24px;
 $h4-font-size: 18px;
 
 $input-btn-padding-x: 1.25em;
@@ -45,3 +45,11 @@ $theme-colors: map-remove($theme-colors, "success", "danger", "warning", "info")
 $colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange", "yellow", "green", "teal", "cyan");
 
 @import "../bootstrap/scss/mixins";
+
+// Additional Variable Maps
+$vibrants: (
+    "primary":   theme-color("primary"),
+    "secondary": theme-color("secondary"),
+    "tertiary":  theme-color("tertiary"),
+	"support":  theme-color("support")
+);

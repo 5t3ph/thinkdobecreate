@@ -1,0 +1,23 @@
+.bg-svg {
+	position: relative;
+}
+
+#home-hero {
+	position: absolute;
+    bottom: -10vh;
+    right: 0;
+    top: 5vh;
+    width: 50vw;
+    z-index: -1;
+	
+	$length: length($vibrants);
+	  @each $name, $color in $vibrants {
+		// index = current item # in the list
+		$i: index(($vibrants), ($name $color));
+
+		// "apply every $length items, starting at current index"
+		path:nth-child(#{$length}n + #{$i}) {
+		  fill: $color;
+		}  
+	  }
+}
