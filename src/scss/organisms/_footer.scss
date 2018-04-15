@@ -1,8 +1,19 @@
 footer {
+	position: relative;
+	overflow: hidden;
 	border-top: 2px solid theme-color("secondary");
 	
 	p {
 		margin: 0;
 		font-size: .8em;
 	}
+}
+
+#github {
+	font-size: 12px;
+    padding: .5em 3em;
+    position: absolute;
+    right: -2.5em;
+    transform: rotate(-35deg);
+    bottom: 1.5em;
 }
