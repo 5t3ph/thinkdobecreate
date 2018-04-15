@@ -41,3 +41,60 @@ h3 {
 p {
 	line-height: 1.7;
 }
+
+article {
+	h2 {
+		color: theme-color("primary");
+	}
+	
+	li {
+		line-height: 1.7;
+	}
+	
+	ol {
+		list-style: none;
+		counter-reset: li;
+		
+		> li {
+			counter-increment: li;
+			
+			&:before {
+				content: counter(li);
+				color: theme-color("primary");
+				display: inline-block;
+				width: 1em;
+				margin-left: -1.5em;
+				margin-right: 0.5em;
+				text-align: right;
+				direction: rtl
+			}
+			
+			ol > li:before {
+				color: theme-color("dark");
+			}
+		}
+			
+		li + li {
+			margin-top: .5em;
+		}
+	}
+	
+	h2,
+	h3 {
+		& + p,
+		& + ul,
+		& + ol {
+			margin-top: 1.5em;
+		}
+	}
+	
+	p,
+	ol,
+	ul {
+		& + h2,
+		& + h3 {
+			margin-top: 1.5em;
+		}
+	}
+	
+}

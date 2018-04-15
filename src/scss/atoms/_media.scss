@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-#home-hero {
+#hero-svg {
 	position: absolute;
     bottom: -10vh;
     right: 0;
@@ -21,13 +21,27 @@
 		}  
 	  }
 	
+	&.single {
+		top: 20%;
+		height: 120%;
+		width: auto;
+	}
+	
 	@include media-breakpoint-down(lg) {
-		width: 55vw;
-		top: 10vh;
+		&.home {
+			width: 55vw;
+			top: 10vh;
+		}
+		
+		&.single {
+			top: 60%;
+		}
 	}
 	
 	@include media-breakpoint-down(sm) {
-		width: 75vw;
-		top: 20vh;
+		&.home {
+			width: 75vw;
+			top: 20vh;
+		}
 	}
 }
