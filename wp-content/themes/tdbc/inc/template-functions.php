@@ -36,3 +36,6 @@ function tdbc_list_categories() {
 	}
 	echo implode( ', ', $category_list );
 }
+
+// Remove emojis for performance
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 ); 

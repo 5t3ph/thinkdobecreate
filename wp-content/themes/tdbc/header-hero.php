@@ -1,7 +1,7 @@
 <div class="hero<?php echo !is_front_page() ? ' hero-single' : ''; ?> bg-svg d-flex align-items-sm-center py-4">
 	<div class="container">
 		<div class="row">
-			<div class="col pb-4">
+			<div class="col-sm-8 pb-4">
 				<?php
 				if(is_front_page()) { ?>
 					<h1 class="d-flex flex-column"><span class="order-2">stephanie eckles</span> <small class="order-1">@5t3ph</small></h1>

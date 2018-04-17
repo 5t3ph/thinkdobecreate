@@ -14,7 +14,7 @@
 
 get_header(); ?>
 <main role="main" class="container">
-	<div class="row">
+	<div class="row justify-content-center">
 		<div class="col-md-10 col-lg-8 py-5">
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

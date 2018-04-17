@@ -28,7 +28,7 @@ get_header(); ?>
 					foreach( $feature as $post ) :
 						setup_postdata($post); ?>
 					<h2 class="d-flex flex-column justify-content-center"><small class="decorated">Featured Work</small> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p class="px-lg-4 mt-3"><?php the_excerpt(); ?></p>
+					<p class="px-lg-4 mt-3"><?php echo strip_tags(get_the_excerpt()); ?></p>
 					<a href="<?php the_permalink(); ?>" class="btn btn-tertiary btn-lg py-0">Read More</a>
 					<?php endforeach; wp_reset_postdata(); ?>
 				</div>
