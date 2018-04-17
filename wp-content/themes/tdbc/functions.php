@@ -55,9 +55,9 @@ function tdbc_scripts() {
 add_action( 'wp_enqueue_scripts', 'tdbc_scripts' );
 
 /* --------------------------------
- * BOOTSTRAP STYLING OF GRAVITY FORMS - NEEDS UPDATE
+ * BOOTSTRAP STYLING OF GRAVITY FORMS
    --------------------------------*/
-/*add_filter("gform_field_content", "bootstrap_styles_for_gravityforms_fields", 0, 5);
+add_filter("gform_field_content", "bootstrap_styles_for_gravityforms_fields", 0, 5);
 function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lead_id, $form_id){
 
 	if($field["type"] != 'hidden' && $field["type"] != 'list' && $field["type"] != 'multiselect' && $field["type"] != 'checkbox' && $field["type"] != 'fileupload' && $field["type"] != 'date' && $field["type"] != 'html' && $field["type"] != 'address') {
@@ -76,7 +76,7 @@ function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lea
 			$content = str_replace('class=\'textarea', 'class=\'form-control textarea', $content);
 	}
 
-	if($field["type"] == 'checkbox') {
+	/*if($field["type"] == 'checkbox') {
 			$content = str_replace('ul class=\'', 'ul class=\'checkbox ', $content);
 			$content = str_replace('<input ', '<input style=\'margin-left:1px;\' ', $content);
 	}
@@ -84,10 +84,10 @@ function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lea
 	if($field["type"] == 'radio' && strpos($field["cssClass"], 'form-horizontal') !== FALSE) {
 			$content = str_replace('li class=\'gchoice', 'li style=\'margin-right: .75em;\' class=\'form-check form-check-inline gchoice', $content);
 			$content = str_replace('<input ', '<input style=\'margin-top: 0;\' ', $content);
-	}
+	}*/
 
 	return $content;
-}*/// End function
+} // End function
 
 function form_submit_btn($button, $form){
 	$dom = new DOMDocument();

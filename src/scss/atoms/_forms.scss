@@ -1,0 +1,42 @@
+.gform_wrapper {
+	
+	.gfield_label {
+		margin-bottom: 0;
+	}
+	
+	.gfield_required {
+		color: theme-color("tertiary") !important;
+	}
+	
+	.validation_error {
+		padding: 1em .5em !important;
+		color: $body-color !important;
+		background-color: lighten(theme-color("support"), 45%);
+		border: none !important;
+		border-radius: .75em;
+		margin-bottom: 2em !important;
+	}
+	
+	li.gfield_error {
+		background: transparent !important;
+		border: none !important;
+		border-left: 2px solid theme-color("support") !important;
+		padding-left: 1em;
+		
+		label,
+		.validation_message {
+			color: $body-color !important;
+		}
+		
+		.field_description_below .gfield_description.validation_message {
+			padding-top: 0 !important;
+		}
+		
+		input,
+		select,
+		textarea {
+			border-color: theme-color("tertiary") !important;
+		}
+	}
+
+}

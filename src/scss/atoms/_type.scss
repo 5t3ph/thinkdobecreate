@@ -99,11 +99,28 @@ article {
 	
 	p,
 	ol,
-	ul {
+	ul,
+	.row {
 		& + h2,
 		& + h3 {
 			margin-top: 1.5em;
 		}
+	}
+	
+	p small em {
+		display: block;
+	}
+	
+	h3 + p:last-child {
+		margin-top: .5em;
+	}
+	
+	.lead,
+	blockquote {
+		padding-left: 1em;
+		border-left: 2px solid theme-color("tertiary");
+		margin-left: -1.03em;
+    	line-height: 1.5;
 	}
 	
 }
