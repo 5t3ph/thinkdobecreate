@@ -57,15 +57,19 @@ add_action( 'wp_enqueue_scripts', 'tdbc_scripts' );
 /* --------------------------------
  * BOOTSTRAP STYLING OF GRAVITY FORMS
    --------------------------------*/
-add_filter("gform_field_content", "bootstrap_styles_for_gravityforms_fields", 0, 5);
-function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lead_id, $form_id){
+add_filter("gform_field_content", "bootstrap4_styles_for_gravityforms_fields", 0, 5);
+function bootstrap4_styles_for_gravityforms_fields($content, $field, $value, $lead_id, $form_id){
 
-	if($field["type"] != 'hidden' && $field["type"] != 'list' && $field["type"] != 'multiselect' && $field["type"] != 'checkbox' && $field["type"] != 'fileupload' && $field["type"] != 'date' && $field["type"] != 'html' && $field["type"] != 'address') {
+	if($field["type"] != 'hidden' && $field["type"] != 'list' && $field["type"] != 'checkbox' && $field["type"] != 'fileupload' && $field["type"] != 'date' && $field["type"] != 'html' && $field["type"] != 'address') {
 		$content = str_replace('class=\'medium', 'class=\'form-control medium', $content);
 	}
 
-	if($field["type"] == 'name' || $field["type"] == 'address') {
+	if($field["type"] == 'name' || $field["type"] == 'address' || $field["type"] == 'list' || $field["type"] == 'time' || $field["type"] == 'date') {
 			$content = str_replace('<input ', '<input class=\'form-control\' ', $content);
+		
+			if($field["type"] == 'address' || $field["type"] == 'time') {
+				$content = str_replace('<select ', '<select style="height: 2.25rem;" class=\'form-control\' ', $content);
+			}
 	}
 	
 	if($field["type"] == 'number') {
@@ -75,16 +79,12 @@ function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lea
 	if($field["type"] == 'textarea') {
 			$content = str_replace('class=\'textarea', 'class=\'form-control textarea', $content);
 	}
-
-	/*if($field["type"] == 'checkbox') {
-			$content = str_replace('ul class=\'', 'ul class=\'checkbox ', $content);
-			$content = str_replace('<input ', '<input style=\'margin-left:1px;\' ', $content);
+	
+	if($field["type"] == 'checkbox' || $field["type"] == 'radio') {
+		$content = str_replace('li class=\'', 'li style="padding-left: 1.25rem !important;" class=\'form-check ', $content);
+		$content = str_replace('<input ', '<input style="position: absolute; margin-top: .3rem; margin-left: -1.2rem;" class=\'form-check-input\' ', $content);
+		$content = str_replace('<label ', '<label class=\'form-check-label\' ', $content);
 	}
-
-	if($field["type"] == 'radio' && strpos($field["cssClass"], 'form-horizontal') !== FALSE) {
-			$content = str_replace('li class=\'gchoice', 'li style=\'margin-right: .75em;\' class=\'form-check form-check-inline gchoice', $content);
-			$content = str_replace('<input ', '<input style=\'margin-top: 0;\' ', $content);
-	}*/
 
 	return $content;
 } // End function
