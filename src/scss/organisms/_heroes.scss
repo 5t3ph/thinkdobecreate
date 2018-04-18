@@ -21,3 +21,53 @@
 	overflow: hidden;
     border-bottom: 2px solid theme-color("primary");
 }
+
+#hero-svg {
+	position: absolute;
+    bottom: -10vh;
+    right: 0;
+    top: 5vh;
+    width: 52vw;
+    z-index: -1;
+	
+	$length: length($vibrants);
+	  @each $name, $color in $vibrants {
+		// index = current item # in the list
+		$i: index(($vibrants), ($name $color));
+
+		// "apply every $length items, starting at current index"
+		path:nth-child(#{$length}n + #{$i}) {
+		  fill: $color;
+		}  
+	  }
+	
+	&.single {
+		top: 20%;
+		height: 120%;
+		width: auto;
+	}
+	
+	@include media-breakpoint-down(lg) {
+		&.home {
+			width: 55vw;
+			top: 10vh;
+		}
+		
+		&.single {
+			top: 60%;
+		}
+	}
+	
+	@include media-breakpoint-down(sm) {
+		& {
+			width: 75vw;
+			top: 20vh;
+		}
+	}
+	
+	@include media-breakpoint-down(xs) {
+		&.single {
+			top: 80%;
+		}
+	}
+}

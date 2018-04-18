@@ -2,50 +2,6 @@
 	position: relative;
 }
 
-#hero-svg {
-	position: absolute;
-    bottom: -10vh;
-    right: 0;
-    top: 5vh;
-    width: 52vw;
-    z-index: -1;
-	
-	$length: length($vibrants);
-	  @each $name, $color in $vibrants {
-		// index = current item # in the list
-		$i: index(($vibrants), ($name $color));
-
-		// "apply every $length items, starting at current index"
-		path:nth-child(#{$length}n + #{$i}) {
-		  fill: $color;
-		}  
-	  }
-	
-	&.single {
-		top: 20%;
-		height: 120%;
-		width: auto;
-	}
-	
-	@include media-breakpoint-down(lg) {
-		&.home {
-			width: 55vw;
-			top: 10vh;
-		}
-		
-		&.single {
-			top: 60%;
-		}
-	}
-	
-	@include media-breakpoint-down(sm) {
-		&.home {
-			width: 75vw;
-			top: 20vh;
-		}
-	}
-}
-
 article img {
 	max-width: 100%;
 	height: auto;
