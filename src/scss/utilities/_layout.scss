@@ -1,5 +1,6 @@
 body {
 	border-top: 2px solid theme-color("tertiary");
+	min-height: calc( 100vh - 2px );
 }
 
 article:first-of-type {

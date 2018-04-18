@@ -1,4 +1,4 @@
-<body <?php body_class(); ?>>
+<body <?php body_class('d-flex flex-column'); ?>>
 	
 <div class="container-fluid">
 	<div class="row justify-content-end">

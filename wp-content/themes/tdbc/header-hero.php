@@ -12,7 +12,12 @@
           			<?php tdbc_list_categories(); ?>
           			</p>
           		<?php } else if(is_archive()) { 
-					the_archive_title( '<h1>', '</h1>' );
+					if(is_post_type_archive('case_study')) {
+						echo '<h1>Case Studies</h1>';
+					} else {
+						the_archive_title( '<h1>', '</h1>' );
+						echo '<a class="btn btn-primary btn-sm" href="'.home_url('/blog/').'">View All Posts</a>';
+					}
 				} else { 
 					if(is_single()) { ?>
 						<h1 class="d-flex flex-column"><span class="order-2"><?php the_title(); ?></span> <small class="order-1 decorated">Posted on <?php the_time('F jS, Y'); ?>  in <?php the_category(', '); ?></small></h1>

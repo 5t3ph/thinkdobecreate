@@ -14,7 +14,7 @@ if(is_front_page() || is_single()) {
 	get_template_part('template-parts/partial', 'recentposts');
 } ?>
 
-<footer class="py-3 text-center">
+<footer class="mt-auto py-3 text-center">
 	<div class="container">
 		<div class="row justify-content-center align-items-end">
 			<div class="col-12 text-center">
