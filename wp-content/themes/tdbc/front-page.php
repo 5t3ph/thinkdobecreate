@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php get_template_part('template-parts/partial', 'contact'); ?>
 
-<section class="container py-5 my-0 my-md-5">
+<section id="content" class="container py-5 my-0 my-md-5">
 	<div class="row justify-content-center">
 		<div class="col-lg-8">
 			<div class="card border-vibrant">

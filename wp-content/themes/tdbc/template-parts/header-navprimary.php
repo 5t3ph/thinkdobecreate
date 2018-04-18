@@ -1,5 +1,5 @@
 <body <?php body_class('d-flex flex-column'); ?>>
-	
+<a href="#content" class="sr-only sr-only-focusable skip-link">Skip to main content</a>
 <div class="container-fluid">
 	<div class="row justify-content-end">
 		<div id="nav" class="col-sm-auto bg-primary">

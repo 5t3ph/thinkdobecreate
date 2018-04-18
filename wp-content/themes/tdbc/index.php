@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-<main role="main" class="container">
+<main id="content" role="main" class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-10 col-lg-8 py-5">
 
