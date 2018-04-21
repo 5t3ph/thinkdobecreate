@@ -20,7 +20,7 @@
 					}
 				} else { 
 					if(is_single()) { ?>
-						<h1 class="d-flex flex-column"><span class="order-2"><?php the_title(); ?></span> <small class="order-1 decorated">Posted on <?php the_time('F jS, Y'); ?>  in <?php the_category(', '); ?></small></h1>
+						<h1 class="d-flex flex-column"><span class="order-2"><?php the_title(); ?></span> <small class="order-1 decorated">Posted on <?php the_time('F jS, Y'); ?><?php if('post' == get_post_type()) { echo ' in '; the_category(', '); } ?></small></h1>
 					<?php } else { ?>
 						<h1><?php the_title(); ?></h1>
 					<?php } 

@@ -59,15 +59,10 @@
 	}
 	
 	@include media-breakpoint-down(sm) {
-		& {
+		&.home,
+		&.single {
 			width: 75vw;
 			top: 20vh;
-		}
-	}
-	
-	@include media-breakpoint-down(xs) {
-		&.single {
-			top: 80%;
 		}
 	}
 }
